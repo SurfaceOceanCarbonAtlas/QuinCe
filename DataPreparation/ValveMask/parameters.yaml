@@ -1,0 +1,98 @@
+
+# data comes from:
+#  - [add_offset, scale_factor, delta] from
+#     @cyclone:/Data/gfi/projects/metdata/scripts/FARLAB/FaVaCal/src/FaVaCal_calibrations.m [2017.09.10]
+#  - [std DI, std GSM1]                    form
+#     @cyclone:/Data/gfi/projects/metdata/scripts/FARLAB/FaVaCal/src/FARLAB_standards.m [2020.10.20]
+#
+# packed_value = (unpacked_value - add_offset) / scale_factor
+# unpacked_value = (packed_value * scale_factor) + add_offset
+
+default:
+   d18O:
+      delta: 4.0
+      scale_factor: 0.8884
+      add_offset: -0.7219
+
+      std:
+         # assume to be packed value
+         DI: -7.78
+         GSM1: -33.07
+
+   dD:
+      delta: 30.0
+      scale_factor: 1.0778
+      add_offset: 8.2977
+
+      std:
+         # assume to be packed value
+         DI: -50.38
+         GSM1: -262.95
+
+HKDS2038:
+   d18O:
+      # calibration 202002-HKDS2038/HKDS2039
+      std:
+         # assume to be packed value
+         DI: -7.68
+         GSM1: -32.90
+
+      scale_factor: 0.9909
+      add_offset: 0.3121
+   dD:
+      # calibration 202002-HKDS2038/HKDS2039
+      std:
+         # assume to be packed value
+         DI: -49.71
+         GSM1: -261.58
+      scale_factor: 0.9947
+      add_offset: -0.9627
+
+HKDS2039:
+   d18O:
+      # calibration 202002-HKDS2038/HKDS2039
+      std:
+         # assume to be packed value
+         DI: -7.68
+         GSM1: -32.90
+      scale_factor:
+      add_offset:
+   dD:
+      # calibration 202002-HKDS2038/HKDS2039
+      std:
+         DI: -49.71
+         GSM1: -261.58
+      scale_factor:
+      add_offset:
+
+HIDS2254:
+   d18O:
+      std:
+         # assume to be packed value
+         DI:
+         GSM1:
+      scale_factor: 0.8884
+      add_offset: -0.7219
+   dD:
+      std:
+         # assume to be packed value
+         DI:
+         GSM1:
+      scale_factor: 1.0778
+      add_offset: 8.2977
+
+HIDS2380:
+   d18O:
+      std:
+         # assume to be packed value
+         DI:
+         GSM1:
+      scale_factor: 1.1279
+      add_offset: -25.8950
+   dD:
+      std:
+         # assume to be packed value
+         DI:
+         GSM1:
+      scale_factor: 1.1710
+      add_offset: -0.3772
